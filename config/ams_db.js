@@ -15,7 +15,7 @@ const pool = mysql.createPool({
 
 pool.getConnection()
     .then((connection) => {
-        console.log('Connected to the MySQL database successfully!');
+        console.log('Connected to MySQL database');
         connection.release();
     })
     .catch((error) => {
@@ -23,4 +23,5 @@ pool.getConnection()
     });
 
 // para magamit sa uban
+
 module.exports = pool;
