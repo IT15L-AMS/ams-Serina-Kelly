@@ -14,4 +14,12 @@ router.get('/grades', verifyToken, checkPermission('manage_grades'), (req, res) 
     res.json({ message: "Grade Management System" });
 });
 
+router.get('/profile', verifyToken, (req, res) => {
+    res.json({
+        success: true,
+        message: "Welcome to your profile",
+        user: req.user 
+    });
+});
+
 module.exports = router;
